@@ -19,6 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
+        'httpx>=0.23.3',
         'nonebot2>=2.0.0rc3',
         'nonebot-adapter-onebot>=2.0.0b1'
     ]
