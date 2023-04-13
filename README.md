@@ -77,7 +77,9 @@ _✨ NoneBot osu!用户审核入群 ✨_
 |:-----:|:----:|:----:|:----:|
 | osu_amd | 是 | 无 | 填入osu!官网申请的apiV1 |
 
-https://osu.ppy.sh/p/api
+申请地址：https://osu.ppy.sh/p/api
+
+填写示例：osu_amd="api"
 
 请在使用时通过管理群->加群方式->需要身份认证中开启需要回答问题并由管理员审核并将bot设为管理员
 
