@@ -6,32 +6,27 @@
 
 <div align="center">
 
-# nonebot-plugin-example
+# nonebot-plugin-osuverify
 
-_✨ NoneBot 插件简单描述 ✨_
+_✨ NoneBot osu!用户审核入群 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-example.svg" alt="license">
+    <img src="https://img.shields.io/github/license/mas-alone/nonebot-plugin-osuverify.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-example">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-example.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-osuverify">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-osuverify.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
 
 </div>
 
-这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
-
-模板库使用方法:
-1. 点击仓库中的 "Use this template" 按钮, 输入仓库名与描述, 点击 "  Create repository from template" 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`nonebot-plugin-example`为插件名; 全局替换`nonebot_plugin_example`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
-
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+本插件可以实现验证osu!账号是否属实，如果属实即自动批准入群并修改其群名片为申请时输入的id
+请在使用时通过`管理群`->`加群方式`->`需要身份认证`中开启`需要回答问题并由管理员审核`并将bot设为管理员
+
+灵感来自nonebot_plugin_bf1_groptools
 
 ## 💿 安装
 
@@ -39,7 +34,7 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-example
+    nb plugin install nonebot-plugin-osuverify
 
 </details>
 
@@ -50,27 +45,27 @@ _✨ NoneBot 插件简单描述 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-example
+    pip install nonebot-plugin-osuverify
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-example
+    pdm add nonebot-plugin-osuverify
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-example
+    poetry add nonebot-plugin-osuverify
 </details>
 <details>
 <summary>conda</summary>
 
-    conda install nonebot-plugin-example
+    conda install nonebot-plugin-osuverify
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-    plugins = ["nonebot_plugin_example"]
+    plugins = ["nonebot_plugin_osuverify"]
 
 </details>
 
@@ -80,14 +75,15 @@ _✨ NoneBot 插件简单描述 ✨_
 
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| 配置项1 | 是 | 无 | 配置说明 |
-| 配置项2 | 否 | 无 | 配置说明 |
+| osu_amd | 是 | 无 | 填入osu!官网申请的apiV1 |
+
+https://osu.ppy.sh/p/api
+
+请在使用时通过管理群->加群方式->需要身份认证中开启需要回答问题并由管理员审核并将bot设为管理员
 
 ## 🎉 使用
 ### 指令表
-| 指令 | 权限 | 需要@ | 范围 | 说明 |
-|:-----:|:----:|:----:|:----:|:----:|
-| 指令1 | 主人 | 否 | 私聊 | 指令说明 |
-| 指令2 | 群员 | 是 | 群聊 | 指令说明 |
-### 效果图
-如果有效果图的话
+无图，无指令。
+如果输入的osu!用户名官网查无此人，bot会拒绝，并提示用户输入正确的用户名。
+
+如果验证通过，bot会自动修改用户的Q群备注为osu!用户名。
