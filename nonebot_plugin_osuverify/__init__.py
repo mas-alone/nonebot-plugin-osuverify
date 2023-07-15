@@ -20,7 +20,7 @@ __plugin_meta__ = PluginMetadata(
 )
 
 join_group = on_request(
-    priority=0,
+    priority=1,
     block=True
 )
 
