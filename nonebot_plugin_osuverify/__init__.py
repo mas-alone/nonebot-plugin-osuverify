@@ -52,8 +52,8 @@ async def _grh(bot: Bot, event: GroupRequestEvent):
                 await bot.set_group_card(group_id=event.group_id, user_id=event.user_id, card=comment)
                 await join_group.finish(MessageSegment.at(event.user_id) + '欢迎加入本群，已将您的群名片改为您的osu!用户名:{}'.format(comment))
             else:
-                await event.reject(bot, reason='id: {} 认证错误，请检查您输入的是否为osu!用户名'.format(comment))
+                await event.reject(bot, reason='id: {} 认证错误，请检查您输入的是否为正确的osu!用户名'.format(comment))
         else:
-            await event.reject(bot, reason='id: {} 认证错误，请检查您输入的是否为osu!用户名'.format(comment))
+            await event.reject(bot, reason='id: {} 认证错误，请检查您输入的是否为正确的osu!用户名'.format(comment))
     else:
         pass
