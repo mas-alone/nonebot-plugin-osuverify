@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="nonebot-plugin-osuverify",  # 项目名称，保证它的唯一性，不要跟已存在的包名冲突即可
-    version="0.1.0",  # 程序版本
+    version="0.1.1",  # 程序版本
     author="A M D",  # 项目作者
     author_email="mas_alone@qq.com",  # 作者邮件
     description="通过osu!账号审核入群功能",  # 项目的一句话描述
