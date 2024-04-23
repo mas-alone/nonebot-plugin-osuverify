@@ -13,8 +13,10 @@ from nonebot.adapters.onebot.v11.message import MessageSegment
 
 __plugin_meta__ = PluginMetadata(
     name='osu!入群验证',
+    type='application',
     description='osu!账户自动审批入群申请！',
-    usage="",
+    homepage='https://github.com/mas-alone/nonebot-plugin-sayoroll',
+    usage="通过判断用户入群的答案，通过osu! api查询用户名验证入群",
     config={},
     extra={}
 )
